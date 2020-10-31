@@ -1,0 +1,36 @@
+@use '../base/variables' as *;
+
+.about {
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  &__body {
+    display: flex;
+    margin-bottom: 40px;
+
+    @media (max-width: $break-md-max) {
+      display: block;
+    }
+
+    &_left {
+      flex: 1;
+      margin-right: 40px;
+
+      @media (max-width: $break-md-max) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+    }
+
+    &_right {
+      width: 240px;
+
+      @media (max-width: $break-md-max) {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@use '../base/variables' as *;
+
+.services {
+  
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    margin-bottom: 40px;
+
+    h4 {
+      margin-bottom: 30px;
+    }
+
+    &_item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $primary-border-color;
+      padding-bottom: 10px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &-icon {
+        width: 30px;
+        margin-right: 20px;
+        color: $secondary-color;
+        font-size: 22px;
+      }
+
+      &-text {
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

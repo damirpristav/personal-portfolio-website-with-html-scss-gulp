@@ -1,0 +1,25 @@
+@use '../base/variables' as *;
+
+.contact-box {
+  border: 1px solid $primary-border-color;
+  padding: 20px;
+
+  &__row {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &_icon {
+      width: 30px;
+      margin-right: 10px;
+      color: $secondary-color;
+      font-size: 20px;
+    }
+
+    &_text {
+      padding-top: 5px;
+    }
+  }
+}

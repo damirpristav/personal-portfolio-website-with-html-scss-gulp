@@ -1,0 +1,74 @@
+@use '../base/variables' as *;
+
+.intro {
+  display: flex;
+
+  @media (max-width: $break-lg-max) {
+    display: block;
+  }
+
+  &__left {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid $primary-border-color;
+    margin-right: 40px;
+    align-self: flex-start;
+
+    div {
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        display: block;
+        transition: transform .3s ease;
+        backface-visibility: hidden;
+
+        &:hover {
+          transform: scale(1.4) rotate(5deg);
+        }
+      }
+    }
+
+    @media (max-width: $break-lg-max) {
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__right {
+    flex: 1;
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 40px;
+    }
+
+    &_actions {
+      display: flex;
+
+      @media (max-width: $break-sm-max) {
+        display: block;
+      }
+
+      .btn {
+
+        &:first-child {
+          margin-right: 20px;
+        }
+
+        @media (max-width: $break-sm-max) {
+          width: 100%;
+
+          &:first-child {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.form {
+  
+  &__group {
+    margin-bottom: 40px;
+
+    input, textarea {
+      border: 0;
+      outline: 0;
+      border-bottom: 1px solid $primary-border-color;
+      background-color: transparent;
+      font-size: 14px;
+      font-weight: 300;
+      font-family: $ff-primary;
+      letter-spacing: 1px;
+      padding: 0 0 10px;
+      display: block;
+      width: 100%;
+      transition: border .3s ease;
+
+      @include placeholder {
+        color: $secondary-color;
+      }
+
+      &:focus {
+        border-color: $primary-color;
+      }
+    }
+
+    textarea {
+      resize: none;
+      height: 80px;
+    }
+  }
+
+  &__submit {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    outline: 0;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color .3s ease, color .3s ease;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $primary-light-color;
+    }
+  }
+}

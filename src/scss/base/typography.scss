@@ -1,0 +1,52 @@
+@use 'variables' as *;
+
+h1 {
+  font-size: 48px;
+  font-weight: 500;
+  font-family: $ff-secondary;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 300;
+  font-family: $ff-secondary;
+  color: $secondary-color;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 300;
+  font-family: $ff-secondary;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: $ff-secondary;
+  line-height: 1.2;
+}
+
+h5 {
+  font-family: $ff-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+h6 {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.2;
+  color: $secondary-color;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+}

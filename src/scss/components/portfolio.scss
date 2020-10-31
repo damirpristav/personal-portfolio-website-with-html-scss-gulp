@@ -1,0 +1,106 @@
+@use '../base/variables' as *;
+
+.portfolio {
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid $primary-border-color;
+    margin-bottom: 50px;
+
+    &_item {
+      margin-bottom: 40px;
+      width: 48%;
+
+      @media (max-width: $break-sm-max) {
+        width: 100%;
+      }
+
+      &-img {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: '';
+          width: 100%;
+          height: 100%;
+          background-color: rgba($primary-color, 0.5);
+          opacity: 0;
+          transition: opacity .3s ease;
+        }
+
+        a {
+          position: absolute;
+          top: calc(50% - 10px);
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 60px;
+          height: 60px;
+          background-color: $primary-light-color;
+          border-radius: 50%;
+          color: $primary-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0;
+          transition: all .3s ease;
+
+          &:hover {
+            background-color: lighten($primary-color, 10);
+            color: $primary-light-color;
+          }
+        }
+
+        img {
+          display: block;
+          max-width: 100%;
+        }
+
+        &:hover {
+
+          &::before {
+            opacity: 1;
+          }
+
+          a {
+            top: 50%;
+            opacity: 1;
+          }
+        }
+      }
+
+      &-category {
+        display: flex;
+        justify-content: center;
+        padding: 15px 0;
+
+        span {
+          color: $primary-color;
+          font-size: 12px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+      }
+
+      h3 {
+        text-align: center;
+
+        a {
+          color: $primary-color;
+          transition: color .3s ease;
+
+          &:hover {
+            color: rgba($primary-color, 0.6)
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use '../base/variables' as *;
+
+.menu-trigger {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  display: block;
+  background-color: $primary-light-color;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba($primary-color, 0.2);
+  transition: background-color .3s ease;
+
+  &:hover {
+    background-color: $primary-color;
+
+    span {
+      background-color: $primary-light-color;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    width: 40px;
+    background-color: $primary-color;
+    height: 2px;
+    transform-origin: left;
+    transition: transform .3s ease, left .3s ease, background-color .3s ease, opacity .3s ease;
+    backface-visibility: hidden;
+
+    &:nth-child(2) {
+      top: auto;
+      bottom: 15px;
+    }
+
+    &:nth-child(3) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &.active {
+
+    span {
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        left: 15px;
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+        left: 15px;
+      }
+
+      &:nth-child(3) {
+        opacity: 0;
+      }
+    }
+  }
+}
